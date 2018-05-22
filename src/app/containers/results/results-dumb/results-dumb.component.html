@@ -1,0 +1,52 @@
+<em-result-card *ngFor='let person of peopleResults | async' [name]="person.name" type="Person">
+  <em-result-card-row property="Height">{{ person.height }} cm</em-result-card-row>
+  <em-result-card-row property="Gender">{{ person.gender }}</em-result-card-row>
+  <em-result-card-row property="Weight">{{ person.mass }} kg</em-result-card-row>
+  <em-result-card-row property="Hair colour">{{ person.hair_color }}</em-result-card-row>
+  <em-result-card-row property="Eye colour">{{ person.eye_color }}</em-result-card-row>
+</em-result-card>
+
+<em-result-card *ngFor='let planet of planetsResults | async' [name]="planet.name" type="Planet">
+  <em-result-card-row property="Climate">{{ planet.climate }}</em-result-card-row>
+  <em-result-card-row property="Terrain">{{ planet.terrain }}</em-result-card-row>
+  <em-result-card-row property="Diameter">{{ planet.diameter }} km</em-result-card-row>
+  <em-result-card-row property="Rotation period">{{ planet.rotation_period }} hours</em-result-card-row>
+  <em-result-card-row property="Surface water">{{ planet.surface_water }}</em-result-card-row>
+</em-result-card>
+
+<em-result-card *ngFor='let film of filmsResults | async' [name]="film.title" type="Film">
+  <em-result-card-row property="Episode">{{ film.episode_id }}</em-result-card-row>
+  <em-result-card-row property="Opening crawl">{{ film.opening_crawl }}</em-result-card-row>
+</em-result-card>
+
+<em-result-card *ngFor='let ship of starshipsResults | async' [name]="ship.name" type="Starship">
+  <em-result-card-row property="Model">{{ ship.model }}</em-result-card-row>
+  <em-result-card-row property="Cost">{{ ship.cost_in_credits }} credits</em-result-card-row>
+  <em-result-card-row property="Max Atmosphere speed">{{ ship.max_atmosphering_speed }} kmh</em-result-card-row>
+  <em-result-card-row property="Hyperdrive rating">{{ ship.hyperdrive_rating }}</em-result-card-row>
+  <em-result-card-row property="Max Cargo">{{ ship.cargo_capacity }} kg</em-result-card-row>
+  <em-result-card-row property="Crew">{{ ship.crew }}</em-result-card-row>
+  <em-result-card-row property="Passengers">{{ ship.passengers }}</em-result-card-row>
+  <em-result-card-row property="Manufacturer">{{ ship.manufacturer }}</em-result-card-row>
+  <em-result-card-row property="Length">{{ ship.length }} meters</em-result-card-row>
+  <em-result-card-row property="Consumables">{{ ship.consumables }}</em-result-card-row>
+</em-result-card>
+
+<em-result-card *ngFor='let vehicle of vehiclesResults | async' [name]="vehicle.name" type="Vehicle">
+  <em-result-card-row property="Model">{{ vehicle.model }}</em-result-card-row>
+  <em-result-card-row property="Manufacturer">{{ vehicle.manufacturer }}</em-result-card-row>
+  <em-result-card-row property="Max Atmosphere speed">{{ vehicle.max_atmosphering_speed }}kmh</em-result-card-row>
+  <em-result-card-row property="Cost">{{ vehicle.cost_in_credits }} credits</em-result-card-row>
+  <em-result-card-row property="Crew">{{ vehicle.crew }}</em-result-card-row>
+  <em-result-card-row property="Max Cargo">{{ vehicle.cargo_capacity }} kg</em-result-card-row>
+  <em-result-card-row property="Vehicle class">{{ vehicle.vehicle_class }}</em-result-card-row>
+  <em-result-card-row property="Length">{{ vehicle.length }} meters</em-result-card-row>
+  <em-result-card-row property="Consumables">{{ vehicle.consumables }}</em-result-card-row>
+</em-result-card>
+
+<em-result-card *ngFor='let species of speciesResults | async' [name]="species.name" type="Species">
+  <em-result-card-row property="Classification">{{ species.classification }}</em-result-card-row>
+  <em-result-card-row property="Designation">{{ species.designation }}</em-result-card-row>
+  <em-result-card-row property="Average Height">{{ species.average_height }} cm</em-result-card-row>
+  <em-result-card-row property="Average Lifespan">{{ species.average_lifespan }} years</em-result-card-row>
+</em-result-card>

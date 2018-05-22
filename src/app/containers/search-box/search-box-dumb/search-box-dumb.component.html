@@ -1,0 +1,6 @@
+<div id="search-box-wrapper">
+  <input id="search-box"
+    type="text"
+    (input)="changeSearchText($event.target.value)"
+    [value]="searchTerm | async">
+</div>

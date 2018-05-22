@@ -1,0 +1,25 @@
+div.result-card {
+  padding: 0.5rem;
+  background-color: #ffffff;
+  margin: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 2px 5px 0 rgba(133,133,133,1);
+  -moz-box-shadow: 1px 2px 5px 0 rgba(133,133,133,1);
+  box-shadow: 1px 2px 5px 0 rgba(133,133,133,1);
+
+  div.title-row {
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.4rem;
+    border-bottom: 1px solid #e0e0e0;
+    span.name {
+      font-weight: bold;
+      padding-right: 0.5rem;
+    }
+    span.type {
+      font-style: italic;
+      color: #5c5c5c;
+    }
+  }
+}
