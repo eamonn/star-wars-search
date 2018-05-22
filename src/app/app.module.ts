@@ -7,7 +7,6 @@ import { environment } from '../environments/environment';
 import { ApiModule } from './api/api.module';
 import { AppComponent } from './app.component';
 import { ContainersModule } from './containers/containers.module';
-import { LayoutModule } from './presentation/layout/layout.module';
 import { IStoreState, reducers } from './ngrx/reducers';
 import { SearchQueryEffects } from './ngrx/search-query/search-query.effects';
 import { SearchResultsEffects } from './ngrx/search-results/search-results.effects';
@@ -25,8 +24,8 @@ export const metaReducers = environment.production ? [] : [ logger ];
   ],
   imports: [
     BrowserModule,
-    LayoutModule,
     ContainersModule,
+    PresentationModule,
     ApiModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     EffectsModule.forRoot([
