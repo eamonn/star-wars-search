@@ -29,6 +29,8 @@ export class ResultsSmartComponent {
   public starshipsResults: Observable<IStarWarsStarship[]>;
   public speciesResults: Observable<IStarWarsSpecies[]>;
   public planetsResults: Observable<IStarWarsPlanet[]>;
+  public showLoadingSpinner: Observable<boolean>;
+  public searchIsActive: Observable<boolean>;
 
   constructor(
     private store: Store<IStoreState>
@@ -39,6 +41,8 @@ export class ResultsSmartComponent {
     this.starshipsResults = this.store.select<IStarWarsStarship[]>(SearchResultSelectors.selectResultsForEntity(STARWARS_STARSHIPS));
     this.speciesResults = this.store.select<IStarWarsSpecies[]>(SearchResultSelectors.selectResultsForEntity(STARWARS_SPECIES));
     this.planetsResults = this.store.select<IStarWarsPlanet[]>(SearchResultSelectors.selectResultsForEntity(STARWARS_PLANETS));
+    this.showLoadingSpinner = this.store.select<boolean>(SearchResultSelectors.showLoadingSpinner);
+    this.searchIsActive = this.store.select<boolean>(SearchResultSelectors.selectSearchIsActive);
   }
 
 }

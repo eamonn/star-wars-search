@@ -21,6 +21,9 @@ export class ResultsDumbComponent implements OnInit {
   @Input() public speciesResults: Observable<IStarWarsSpecies[]>;
   @Input() public planetsResults: Observable<IStarWarsPlanet[]>;
 
+  @Input() public showSpinner: Observable<boolean>;
+  @Input() public showResults: Observable<boolean>;
+
   constructor() { }
 
   ngOnInit() {

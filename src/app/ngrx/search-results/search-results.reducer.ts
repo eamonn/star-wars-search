@@ -1,5 +1,4 @@
 import { IStarWarsPerson, StarWarsEntities } from '../../api/star-wars-http.interface';
-import { UpdateSearchQueryAction } from '../search-query/search-query.actions';
 import * as SearchResults from './search-results.actions';
 import * as SearchQuery from '../search-query/search-query.actions';
 
@@ -12,6 +11,7 @@ export interface ISearchResultsState {
     vehicles: Array<any>;
   };
   callsIn: number;
+  activeSearch: boolean;
 }
 
 // In most cases object arrays would not be kept in the store. As it is risky to update an object by array index due to async implications.
@@ -26,6 +26,7 @@ const initialState: ISearchResultsState = {
     vehicles: [],
   },
   callsIn: 0,
+  activeSearch: false
 };
 
 export function searchResultsReducer(
@@ -64,6 +65,12 @@ export function searchResultsReducer(
         vehicles: []
       };
       newState.callsIn = 0;
+      newState.activeSearch = false;
+      break;
+    }
+
+    case SearchResults.LOAD_RESULTS_FOR_TERM: {
+      newState.activeSearch = true;
       break;
     }
   }
