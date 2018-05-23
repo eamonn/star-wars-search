@@ -2,6 +2,11 @@
 
 ## Build and Run
 
+### The really easy way
+
+Just go to [https://eamonn.github.io/star-wars-search/](https://eamonn.github.io/star-wars-search/).
+It is minified here.
+
 ### The easy way (I built it for you already)
 To save you faffing around with tooling and node versions I have deliberately
 removed `/dist` from `.gitignore` (Would not usually do this). There is a prod build in there ready to go.
