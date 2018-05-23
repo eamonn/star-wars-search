@@ -1,3 +1,4 @@
+import update from 'immutability-helper';
 import * as AppErrors from './app-errors.actions';
 
 export interface IAppErrorsState {
@@ -20,8 +21,9 @@ export function appErrorsReducer(state: IAppErrorsState = initialState, action: 
   switch (action.type) {
 
     case AppErrors.APP_ERROR: {
-      newState.errorMessages.push(action.message);
-      break;
+      return update(state, {
+        errorMessages: { $push: [action.message] }
+      });
     }
 
   }
