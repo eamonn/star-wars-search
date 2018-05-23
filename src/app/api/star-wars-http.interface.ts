@@ -1,4 +1,5 @@
 export type StarWarsEntities = 'films' | 'people' | 'planets' | 'species' | 'starships' | 'vehicles';
+export type StarWarsUnion = IStarWarsPerson | IStarWarsFilm | IStarWarsPlanet | IStarWarsStarship | IStarWarsVehicle | IStarWarsSpecies;
 
 export interface IStarWarsApiSearchResponse<T> {
   count: number;
