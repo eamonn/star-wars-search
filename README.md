@@ -82,7 +82,7 @@ Both of these measures are to help with network overhead, wasted API calls and A
 I have not unit tested the whole project as it is not in production.
 I have tried to give a variety of unit tests for different scenarios within the time I had & aim to add more:
 - [ngrx reducer](https://github.com/eamonn/star-wars-search/blob/master/src/app/ngrx/search-results/search-results.reducer.spec.ts)
-- [ngrx effects](https://github.com/eamonn/star-wars-search/blob/master/src/app/ngrx/search-query/search-query.effects.spec.ts)
+- [ngrx effects](https://github.com/eamonn/star-wars-search/blob/master/src/app/ngrx/search-query/search-query.effects.spec.ts) - Includes Rx Marble Testing
 - [http service](https://github.com/eamonn/star-wars-search/blob/master/src/app/api/star-wars-http.service.spec.ts)
 - [presentation component](https://github.com/eamonn/star-wars-search/blob/master/src/app/presentation/result-card-row/result-card-row.component.spec.ts) - Includes host component testing
 
