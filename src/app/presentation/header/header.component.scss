@@ -1,0 +1,17 @@
+.header-container {
+  border-bottom: 1px solid #1d0e68;
+  background: linear-gradient(#423aff, #2e18ab);
+  padding: 10px;
+  color: #ffffff;
+  font-family: 'Passion One', cursive;
+  font-size: 2rem;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+  position: fixed;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+}
