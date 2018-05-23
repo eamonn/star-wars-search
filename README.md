@@ -42,7 +42,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-----
+
 ## Notes
 
 ### Angular/ngrx vs React/Redux decision
@@ -80,15 +80,11 @@ Both of these measures are to help with network overhead, wasted API calls and A
 
 ### About Unit Tests
 I have not unit tested the whole project as it is not in production.
-I have tried to give a variety of unit test's for different scenarios:
-- ngrx actions
-- ngrx reducer ``
-- ngrx selector
-- ngrx effects
-- http service
-- smart (wrapper) component
-- dumb component
-- presentation component 
+I have tried to give a variety of unit tests for different scenarios within the time I had & aim to add more:
+- [ngrx reducer](https://github.com/eamonn/star-wars-search/blob/master/src/app/ngrx/search-results/search-results.reducer.spec.ts)
+- [ngrx effects](https://github.com/eamonn/star-wars-search/blob/master/src/app/ngrx/search-query/search-query.effects.spec.ts)
+- [http service](https://github.com/eamonn/star-wars-search/blob/master/src/app/api/star-wars-http.service.spec.ts)
+- [presentation component](https://github.com/eamonn/star-wars-search/blob/master/src/app/presentation/result-card-row/result-card-row.component.spec.ts) - Includes host component testing
 
 ### With more time....
 - **Tech Debt:** Results for each entity, are held in arrays in the store.
@@ -96,7 +92,7 @@ Generally, I would not do this as if you update an object by it's array index, a
 could have re-ordered that array. The solution I would usually use is to hold objects in key value pairs (by id for example).
 Then for state where order is important store an ordered array of the id's. This API does not provide id's on the returned objects, and in any case
 the objects inside each array are never modified by the app so this would not cause a bug here, but it's still good to try and avoid arrays in the store where possible I feel.
-- **Tech Debt:**: Generate API error class/object in catch block in the API Service, consume in effect rather than generate error in the effect. (Seperation of concerns)
-- **Tech Debt:**: In state I am tracking the API calls complete with a simple increment counter. This is not a suitable solution for several reasons.
-- **Feature**: Display errors, not just have them in reducer. Have a way to clear them down.
-- **Tech Debt**: More unit tests, always more unit tests....
+- **Tech Debt:** Generate API error class/object in catch block in the API Service, consume in effect rather than generate error in the effect. (Seperation of concerns)
+- **Tech Debt:** In state I am tracking the API calls complete with a simple increment counter. This is not a suitable solution for several reasons.
+- **Feature:** Display errors, not just have them in reducer. Have a way to clear them down.
+- **Tech Debt:** More unit tests, always more unit tests....
