@@ -94,5 +94,6 @@ Then for state where order is important store an ordered array of the id's. This
 the objects inside each array are never modified by the app so this would not cause a bug here, but it's still good to try and avoid arrays in the store where possible I feel.
 - **Tech Debt:** Generate API error class/object in catch block in the API Service, consume in effect rather than generate error in the effect. (Seperation of concerns)
 - **Tech Debt:** In state I am tracking the API calls complete with a simple increment counter. This is not a suitable solution for several reasons.
+- **Tech Debt:** CSS colors need to move into a imported pallet.
 - **Feature:** Display errors, not just have them in reducer. Have a way to clear them down.
 - **Tech Debt:** More unit tests, always more unit tests....

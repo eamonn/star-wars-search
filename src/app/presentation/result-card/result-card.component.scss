@@ -16,6 +16,13 @@ div.result-card {
     span.name {
       font-weight: bold;
       padding-right: 0.5rem;
+      a {
+        text-decoration: none;
+        color: #423aff;
+        &:hover {
+          color: #2e18ab;
+        }
+      }
     }
     span.type {
       font-style: italic;

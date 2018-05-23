@@ -10,6 +10,10 @@ export class ResultCardComponent implements OnInit {
   @Input() public name: string = '';
   @Input() public type: string = '';
 
+  public get wookieUrl(): string {
+    return `http://starwars.wikia.com/wiki/${this.name}`;
+  }
+
   constructor() { }
 
   ngOnInit() {
