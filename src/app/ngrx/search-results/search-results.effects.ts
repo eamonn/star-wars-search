@@ -111,7 +111,7 @@ export class SearchResultsEffects {
   );
 
   constructor(
-    private starWarsApi: StarWarsHttpService,
-    private actions$: Actions
+    private actions$: Actions,
+    private starWarsApi: StarWarsHttpService
   ) {}
 }

@@ -1,22 +1,14 @@
 import { createFeatureSelector, createSelector, Selector } from '@ngrx/store';
-import {
-  IStarWarsFilm,
-  IStarWarsPerson,
-  IStarWarsPlanet,
-  IStarWarsSpecies,
-  IStarWarsStarship,
-  IStarWarsVehicle, StarWarsEntities
-} from '../../api/star-wars-http.interface';
+import { StarWarsEntities } from '../../api/star-wars-http.interface';
 import { IStoreState } from '../reducers';
-import { ISearchQueryState } from '../search-query/search-query.reducer';
-import { selectSearchQuery } from '../search-query/search-query.selectors';
 import { ISearchResultsState } from './search-results.reducer';
 
 export const selectSearchResults = createFeatureSelector<ISearchResultsState>('searchResults');
 
-export const selectResultsForEntity = <T>(starWarsEntity: StarWarsEntities): Selector<IStoreState, Array<T>> => createSelector(
+// Selector Factory Function
+export const selectResultsForEntity = <T>(starWarsEntity: StarWarsEntities): Selector<IStoreState, T> => createSelector(
   selectSearchResults,
-  (state: ISearchResultsState) => state.results[starWarsEntity]
+  (state: ISearchResultsState): any => state.results[starWarsEntity]
 );
 
 export const selectSearchIsActive: Selector<IStoreState, boolean> = createSelector(
