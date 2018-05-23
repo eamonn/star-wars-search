@@ -16,7 +16,7 @@ export function logger(reducer: ActionReducer<IStoreState>): any {
   return storeLogger({collapsed: true})(reducer);
 }
 
-export const metaReducers = environment.production ? [] : [ logger ];
+export const metaReducers = [ logger ];
 
 @NgModule({
   declarations: [
