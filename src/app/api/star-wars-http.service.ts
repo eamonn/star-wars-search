@@ -26,10 +26,6 @@ export class StarWarsHttpService {
     private http: HttpClient
   ) {}
 
-  public getItem<T>(entity: string, id: number): Observable<T> {
-    return this.http.get<T>(`${API_BASE_URL}/${entity}/${id}`);
-  }
-
   public searchForItems<T>(entity: StarWarsEntities, searchTerm: string): Observable<Array<T>> {
     return this.http.get<IStarWarsApiSearchResponse<T>>(`${API_BASE_URL}/${entity}/?search=${searchTerm}`)
       .map((data: IStarWarsApiSearchResponse<T>): Array<T> => {
