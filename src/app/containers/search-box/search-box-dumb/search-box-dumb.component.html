@@ -1,6 +1,12 @@
+<div class="description-text">
+  <span>Search for items in the Star Wars Universe</span><br/>
+  <span>Search for People, Films, Starships, Vehicles, Species or Planets</span><br/>
+  <span>Get back fact cards based on search results</span>
+</div>
 <div id="search-box-wrapper">
   <input id="search-box"
     type="text"
+    placeholder="e.g. 'Fett', 'Hot', 'Woo'"
     (input)="changeSearchText($event.target.value)"
     [value]="searchTerm | async">
 </div>
