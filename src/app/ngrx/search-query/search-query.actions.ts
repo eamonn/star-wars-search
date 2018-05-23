@@ -14,3 +14,8 @@ export class QueryTooShortAction implements Action {
 
 export type Actions
   = UpdateSearchQueryAction;
+
+
+// Selector Test
+// Smart Component Test
+// Dumb Component Test
